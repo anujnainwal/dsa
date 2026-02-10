@@ -1,0 +1,33 @@
+Linked List 
+What is this
+
+A Linked List is a linear data structure in which data is stored in the form of nodes.
+
+Each node contains two parts:
+
+-> Data (the actual value)
+
+-> Next Pointer/Reference (the address of the next node)
+
+The nodes are connected with each other through these pointers, forming a sequence.
+
+The first node of the linked list is called the Head, and it always points to the next node in the list.
+The last node points to NULL, which indicates the end of the linked list.
+
+✅ Types of Linked List
+
+1. Singly Linked List
+
+    Each node points only to the next node.
+
+2. Doubly Linked List
+
+    Each node contains two pointers: one for the next node and one for the previous node.
+
+3. Circular Linked List
+
+    The last node points back to the head, forming a circle.
+
+4. Doubly Circular Linked List
+
+    A combination of doubly and circular linked list where nodes point both forward and backward, and the last node connects back to the head.

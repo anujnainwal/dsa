@@ -1,0 +1,151 @@
+===============================
+✅ Singly Linked List (SLL) Notes
+===============================
+
+1. What is Singly Linked List?
+--------------------------------
+A Singly Linked List is a linear data structure where data is stored in the form of nodes.
+
+Each node contains:
+1. Data
+2. Next Pointer (address of next node)
+
+Traversal is only possible in forward direction.
+
+------------------------------------------------
+
+2. Structure of Singly Linked List
+----------------------------------
+
+Head → [Data | Next] → [Data | Next] → [Data | Next] → NULL
+
+Example:
+
+Head → 10 → 20 → 30 → NULL
+
+- Head points to the first node
+- Last node points to NULL
+
+------------------------------------------------
+
+3. Node Representation
+----------------------
+
+Node = {
+   data: value,
+   next: reference
+}
+
+------------------------------------------------
+
+4. Why Head is Important?
+-------------------------
+
+Head is the starting point of the linked list.
+Without head, we cannot access the linked list.
+
+------------------------------------------------
+
+5. Time Complexity Summary
+--------------------------
+
+Insert at Start     → O(1)
+Insert at End       → O(n)
+Insert at Position  → O(n)
+
+Delete from Start   → O(1)
+Delete from End     → O(n)
+Delete from Position→ O(n)
+
+Search              → O(n)
+Traversal           → O(n)
+
+------------------------------------------------
+
+6. Common Operations
+---------------------
+
+✅ Insertion:
+- insertAtFirst()
+- insertAtEnd()
+- insertAtPosition()
+
+✅ Deletion:
+- deleteFromStart()
+- deleteFromEnd()
+- deleteFromPosition()
+- deleteByValue()
+
+✅ Searching:
+- search(value)
+
+------------------------------------------------
+
+7. Important Interview Methods
+-------------------------------
+
+🔥 Reverse Linked List
+🔥 Find Middle Node (Slow/Fast Pointer)
+🔥 Detect Cycle (Floyd Algorithm)
+🔥 Remove Nth Node from End
+🔥 Check Palindrome Linked List
+🔥 Merge Two Sorted Linked Lists
+
+------------------------------------------------
+
+8. Advantages
+-------------
+
+✔ Dynamic size
+✔ Easy insertion/deletion
+✔ No shifting required
+✔ Useful in Stack, Queue, Graph
+
+------------------------------------------------
+
+9. Disadvantages
+----------------
+
+✘ No random access like array
+✘ Extra memory for pointer
+✘ Reverse traversal not possible
+
+------------------------------------------------
+
+⭐ NEVER FORGET (Most Important Points)
+--------------------------------------
+
+1. Linked List is made of Nodes, not continuous memory like arrays.
+
+2. Head is mandatory:
+   Without head, list cannot be accessed.
+
+3. Insert at Start is always O(1).
+
+4. Insert at End is O(n) in Singly LL
+   unless Tail pointer is maintained.
+
+5. Middle insertion is same as Insert at Position.
+
+6. Pointer Adjustment Formula (Most Important):
+
+   newNode.next = temp.next
+   temp.next = newNode
+
+7. Deletion Formula:
+
+   temp.next = temp.next.next
+
+8. Slow & Fast Pointer is used for:
+   - Finding middle
+   - Detecting cycle
+
+9. Most Asked Interview Question:
+   Reverse + Cycle Detection + Remove Nth Node
+
+10. Singly Linked List Traversal is only forward,
+    backward traversal is not possible.
+
+===============================
+🔥 End of Singly Linked List Notes
+===============================
