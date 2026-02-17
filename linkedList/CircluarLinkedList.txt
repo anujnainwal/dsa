@@ -1,0 +1,143 @@
+Q: What is Circular Linked List?
+
+Ans: Circular Linked List is a variation of Linked List in which the first element 
+     points to the last element and the last element points to the first element.
+     Instead of the last node pointing to NULL, it points back to the head node.
+
+     Both Singly Linked List and Doubly Linked List can be made into a Circular Linked List.
+
+
+------------------------------------------------------------
+Types of Circular Linked List:
+------------------------------------------------------------
+
+-> There are two types of Circular Linked List:
+
+1 -> Single Circular Linked List
+2 -> Double Circular Linked List
+
+
+------------------------------------------------------------
+1) Single Circular Linked List
+------------------------------------------------------------
+
+Definition:
+In Single Circular Linked List, the last node points back to the first node (head).
+
+Structure of Node:
+- Data
+- Next pointer
+
+Diagram Representation:
+
+     +----+     +----+     +----+
+     | 10 | --> | 20 | --> | 30 |
+     +----+     +----+     +----+
+        ^                         |
+        |_________________________|
+
+
+Key Points:
+- No NULL at the end.
+- Tail.next = Head
+- Traversal must use do-while loop.
+- Infinite loop risk if not handled properly.
+
+
+Basic Structure (Logic):
+
+class Node {
+    data
+    next
+}
+
+class CircularLinkedList {
+    head
+    tail
+    size
+}
+
+
+------------------------------------------------------------
+2) Double Circular Linked List
+------------------------------------------------------------
+
+Definition:
+In Double Circular Linked List:
+- Last node's next points to head
+- Head's previous points to last node
+
+Structure of Node:
+- Data
+- Next pointer
+- Previous pointer
+
+Diagram Representation:
+
+        <---------------------------->
+     +----+ <--> +----+ <--> +----+
+     | 10 |      | 20 |      | 30 |
+     +----+ <--> +----+ <--> +----+
+        ^                              
+        |______________________________|
+
+
+Key Points:
+- No NULL at start or end.
+- Tail.next = Head
+- Head.prev = Tail
+- Can traverse forward and backward.
+
+
+------------------------------------------------------------
+Core Interview Basics (Very Important)
+------------------------------------------------------------
+
+1) Why use Circular Linked List?
+   - Round Robin Scheduling
+   - CPU Scheduling
+   - Multiplayer Turn Systems
+   - Music Playlist Loop
+   - Circular Buffers
+
+2) Time Complexity:
+   - Insert at beginning → O(1)
+   - Insert at end → O(1) (if tail maintained)
+   - Delete at beginning → O(1)
+   - Delete at end → O(n) or O(1) (if tail tracked)
+   - Traversal → O(n)
+
+3) Advantages:
+   - Continuous traversal
+   - No NULL checks at end
+   - Efficient for cyclic processes
+
+4) Disadvantages:
+   - Complex pointer handling
+   - Risk of infinite loops
+   - Harder debugging
+
+5) Important Edge Cases:
+   - Empty list
+   - Single node circular list
+   - Deleting the only node
+   - Traversal stopping condition
+
+6) Difference from Normal Linked List:
+
+   Normal Linked List:
+   Last node → NULL
+
+   Circular Linked List:
+   Last node → Head
+
+
+------------------------------------------------------------
+Very Important Interview Question:
+------------------------------------------------------------
+
+Q: How do you detect if a Linked List is Circular?
+
+Ans:
+Use Floyd’s Cycle Detection Algorithm (Slow & Fast Pointer).
+If slow and fast pointer meet → list is circular.
