@@ -1,0 +1,40 @@
+Q: What is a Doubly Linked List?
+
+A: A Doubly Linked List is a linear data structure in which each node contains three parts:
+
+-> Data – stores the value
+-> Next pointer – points to the next node
+-> Previous pointer – points to the previous node
+
+It allows traversal in both forward and backward directions.
+
+Structure Representation:
+
+NULL <- 10 <-> 20 <-> 30 -> NULL
+
+Basic Operations:
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at specific position
+4. Traverse forward
+5. Traverse backward
+6. Delete from beginning
+7. Delete from end
+8. Delete from specific position
+9. Search for a value
+
+Time Complexity (Important for Interview):
+
+- Insertion at beginning: O(1)
+- Insertion at end: O(1) with tail pointer, otherwise O(n)
+- Deletion: O(1) (if node reference is given)
+- Search: O(n)
+
+Advantages:
+- Bidirectional traversal
+- Easier deletion compared to singly linked list
+
+Disadvantages:
+- Extra memory required for previous pointer
+- More pointer manipulation
