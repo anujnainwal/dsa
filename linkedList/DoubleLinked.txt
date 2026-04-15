@@ -1,0 +1,114 @@
+===============================
+✅ Doubly Linked List (DLL) Notes
+===============================
+
+1. What is Doubly Linked List?
+--------------------------------
+A Doubly Linked List is a linear data structure where each node contains:
+
+1. Data
+2. Previous Pointer (prev)
+3. Next Pointer (next)
+
+So traversal is possible in both directions:
+Forward and Backward.
+
+------------------------------------------------
+
+2. Structure of Doubly Linked List
+----------------------------------
+
+NULL ← [Prev|10|Next] ⇄ [Prev|20|Next] ⇄ [Prev|30|Next] → NULL
+
+Example:
+
+NULL ← 10 ⇄ 20 ⇄ 30 → NULL
+
+- Head points to the first node
+- Tail points to the last node
+- First node prev = NULL
+- Last node next = NULL
+
+------------------------------------------------
+
+3. Node Representation
+----------------------
+
+Node = {
+   prev: reference to previous node,
+   data: value,
+   next: reference to next node
+}
+
+------------------------------------------------
+
+4. Why Doubly Linked List?
+--------------------------
+
+Advantages over Singly Linked List:
+
+✔ Can traverse backward
+✔ Deletion becomes easier (no need to track previous manually)
+✔ Efficient insertion/deletion at both ends
+
+------------------------------------------------
+
+5. Time Complexity Summary
+--------------------------
+
+Insert at Start     → O(1)
+Insert at End       → O(1) (with tail)
+Insert at Position  → O(n)
+
+Delete from Start   → O(1)
+Delete from End     → O(1) (with tail)
+Delete from Position→ O(n)
+
+Search              → O(n)
+Traversal           → O(n)
+
+------------------------------------------------
+
+6. Common Operations
+---------------------
+
+✅ Insertion:
+- insertAtStart()
+- insertAtEnd()
+- insertAtPosition()
+
+✅ Deletion:
+- deleteFromStart()
+- deleteFromEnd()
+- deleteFromPosition()
+
+✅ Traversal:
+- forwardTraversal()
+- backwardTraversal()
+
+------------------------------------------------
+
+⭐ NEVER FORGET (Most Important Points)
+--------------------------------------
+
+1. Each node has TWO pointers:
+   prev and next
+
+2. Pointer Adjustment Formula (Insertion):
+
+   newNode.next = temp.next
+   newNode.prev = temp
+   temp.next.prev = newNode
+   temp.next = newNode
+
+3. Deletion Formula:
+
+   temp.prev.next = temp.next
+   temp.next.prev = temp.prev
+
+4. Head.prev is always NULL
+5. Tail.next is always NULL
+
+===============================
+🔥 End of Doubly Linked List Notes
+===============================

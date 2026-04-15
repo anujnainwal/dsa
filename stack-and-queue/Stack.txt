@@ -1,0 +1,235 @@
+============================================================
+STACK – FULL INTERVIEW THEORY
+============================================================
+
+Q: What is Stack?
+
+Ans: Stack is a linear data structure that follows the principle of 
+     LIFO (Last In First Out).
+
+     The element inserted last will be removed first.
+
+     Example:
+     Stack of plates.
+     The last plate placed on top is removed first.
+
+
+------------------------------------------------------------
+Basic Operations of Stack
+------------------------------------------------------------
+
+1) Push
+   -> Insert element into stack.
+   -> Element is added at the top.
+
+2) Pop
+   -> Remove element from stack.
+   -> Removes the top element.
+
+3) Peek (or Top)
+   -> Returns the top element without removing it.
+
+4) isEmpty
+   -> Checks whether stack is empty.
+
+5) isFull (for array implementation)
+   -> Checks whether stack is full.
+
+
+------------------------------------------------------------
+Stack Representation
+------------------------------------------------------------
+
+Example:
+
+Push: 10, 20, 30
+
+        TOP
+         ↓
+       -----
+       | 30 |
+       -----
+       | 20 |
+       -----
+       | 10 |
+       -----
+
+Pop → removes 30
+
+
+------------------------------------------------------------
+Types of Stack Implementation
+------------------------------------------------------------
+
+1) Array Implementation
+   - Uses fixed size array
+   - Uses index variable called "top"
+   - Overflow possible if array full
+
+2) Linked List Implementation
+   - Uses dynamic memory
+   - No fixed size
+   - No overflow (until memory full)
+
+
+------------------------------------------------------------
+Time Complexity
+------------------------------------------------------------
+
+Push  -> O(1)
+Pop   -> O(1)
+Peek  -> O(1)
+Search -> O(n)
+
+All major operations are constant time.
+
+
+------------------------------------------------------------
+Memory Consideration
+------------------------------------------------------------
+
+Array Stack:
+- Fixed size
+- Can cause overflow
+
+Linked List Stack:
+- Dynamic size
+- Uses extra memory for pointers
+
+
+------------------------------------------------------------
+Applications of Stack (Very Important for Interview)
+------------------------------------------------------------
+
+1) Expression Evaluation
+   - Infix to Postfix
+   - Postfix Evaluation
+
+2) Balanced Parentheses
+   - (), {}, []
+
+3) Function Calls
+   - Call Stack in recursion
+
+4) Undo/Redo Operations
+
+5) Backtracking
+   - Maze solving
+   - DFS traversal
+
+6) Browser Back Button
+
+
+------------------------------------------------------------
+Stack Using Array (Logic)
+------------------------------------------------------------
+
+Variables:
+- stack[]
+- top = -1
+
+Push:
+1) Check overflow
+2) top++
+3) stack[top] = value
+
+Pop:
+1) Check underflow
+2) value = stack[top]
+3) top--
+4) return value
+
+
+------------------------------------------------------------
+Stack Using Linked List (Logic)
+------------------------------------------------------------
+
+Node:
+- data
+- next
+
+Push:
+1) Create new node
+2) newNode.next = head
+3) head = newNode
+
+Pop:
+1) Store head
+2) head = head.next
+3) delete old head
+
+
+------------------------------------------------------------
+Important Interview Questions
+------------------------------------------------------------
+
+1) Why is stack called LIFO?
+2) Difference between stack and queue?
+3) What is stack overflow?
+4) What is stack underflow?
+5) Why recursion uses stack?
+6) How to reverse string using stack?
+7) How to check valid parentheses?
+
+
+------------------------------------------------------------
+Stack Overflow & Underflow
+------------------------------------------------------------
+
+Stack Overflow:
+Occurs when pushing into full stack.
+
+Stack Underflow:
+Occurs when popping from empty stack.
+
+
+------------------------------------------------------------
+Difference: Stack vs Queue
+------------------------------------------------------------
+
+Stack:
+- LIFO
+- Insert/Delete from same end (top)
+
+Queue:
+- FIFO
+- Insert from rear, delete from front
+
+
+------------------------------------------------------------
+Real Life Example
+------------------------------------------------------------
+
+Call Stack:
+When function A calls B and B calls C:
+
+Stack:
+C
+B
+A
+
+When C finishes → removed first.
+
+
+------------------------------------------------------------
+Advanced Concepts
+------------------------------------------------------------
+
+1) Min Stack (Get minimum in O(1))
+2) Two stacks in one array
+3) Stack using Queue
+4) Monotonic Stack
+5) Next Greater Element problem
+
+
+============================================================
+INTERVIEW SUMMARY
+============================================================
+
+Definition: Linear DS following LIFO.
+Core operations: Push, Pop, Peek.
+Time complexity: O(1).
+Applications: Expression evaluation, recursion, backtracking.
+Most common problem: Valid parentheses.
+
+============================================================
