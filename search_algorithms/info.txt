@@ -1,0 +1,41 @@
+Search Algorithms Summary
+
+linear_search.js
+- Simple array search by scanning each element.
+- Best for unsorted arrays or very small arrays.
+- Time: O(n).
+- Space: O(1).
+- Use when the array is not sorted and simplicity matters.
+
+binary_search.js
+- Search sorted arrays by repeatedly splitting in half.
+- Much faster than linear search for large sorted arrays.
+- Time: O(log n).
+- Space: O(1).
+- Use when the input is sorted or can be sorted ahead of time.
+
+breadth_first_search.js
+- Graph search that visits neighbors level by level.
+- Good for finding the shortest path in unweighted graphs.
+- Time: O(V + E).
+- Space: O(V).
+- Use for shortest-path or layer-by-layer traversal.
+
+depth_first_search.js
+- Graph search that explores one branch fully before backtracking.
+- Good for path discovery, topological sort, and connected components.
+- Time: O(V + E).
+- Space: O(V).
+- Use for deep traversal, cycle detection, or order generation.
+
+Interview Tips
+- Explain the difference between searching in arrays and graphs.
+- For arrays: use linear search if unsorted, binary search if sorted.
+- For graphs: use BFS for shortest-path, DFS for deep traversal or backtracking.
+- Always mention time and space complexity.
+
+Edge cases to cover
+- Empty array or graph.
+- Target not found.
+- Single-element array.
+- Graph with disconnected nodes.

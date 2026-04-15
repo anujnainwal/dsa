@@ -1,0 +1,47 @@
+Sort Algorithms Summary
+
+bubble_sort.js
+- Simple comparison-based sort.
+- Best for learning and very small arrays.
+- Time: O(n^2).
+- Space: O(1).
+- Not practical for large inputs.
+
+selection_sort.js
+- Selects the smallest element and swaps it into place.
+- Simple, in-place, few writes.
+- Time: O(n^2).
+- Space: O(1).
+- Good for tiny arrays or teaching.
+
+insertion_sort.js
+- Builds sorted portion by inserting one item at a time.
+- Very efficient for nearly sorted arrays.
+- Time: O(n) best, O(n^2) average/worst.
+- Space: O(1).
+- Useful for small or mostly ordered data.
+
+merge_sort.js
+- Divide-and-conquer stable sort.
+- Always O(n log n) time.
+- Space: O(n).
+- Good when stability and reliability matter.
+
+quick_sort.js
+- Fast average-case sort using pivot partitioning.
+- Time: O(n log n) average, O(n^2) worst.
+- Space: O(log n) average.
+- Good general-purpose sort for most arrays.
+
+heap_sort.js
+- Uses a heap to sort in-place.
+- Time: O(n log n) always.
+- Space: O(1).
+- Good when worst-case performance and low extra memory are needed.
+
+Recommendation
+- Small or nearly sorted arrays: insertion_sort.js
+- Stable sort needed: merge_sort.js
+- Fast general-purpose sort: quick_sort.js
+- Guaranteed worst-case: heap_sort.js
+- Teaching/basic understanding: bubble_sort.js, selection_sort.js
